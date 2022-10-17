@@ -1,0 +1,82 @@
+﻿<Window x:Class="Tema3_Formulario.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tema3_Formulario"
+        mc:Ignorable="d"
+        Title="Formulario del viejo" Height="550" Width="850" MinHeight="550" MinWidth="850" Icon="assets/Musett-Cds-Dark-Gold.ico">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" FontSize="40" Text="Formulario" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Bottom"></TextBlock>
+
+            
+        <DockPanel Grid.Row="1" LastChildFill="False">
+            <Image DockPanel.Dock="Right" Source="assets/foto.jpg"></Image>
+            <StackPanel DockPanel.Dock="Top">
+                <Border Background="CadetBlue" Margin="5" BorderBrush="Black" BorderThickness="3" CornerRadius="3">
+                    <Border.Effect>
+                        <DropShadowEffect BlurRadius="5" ShadowDepth="5"/>
+                    </Border.Effect>
+                    <Grid Height="80">
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="60"></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition Width="25"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Grid.Row="0" Grid.Column="0" Text="Nombre" Margin="2"></TextBlock>
+                        <TextBlock Grid.Row="1" Grid.Column="0" Text="Edad" Margin="2"></TextBlock>
+                        <TextBlock Grid.Row="2" Grid.Column="0" Text="Direccion" Margin="2"></TextBlock>
+                        <TextBox Grid.Row="0" Grid.Column="1" Margin="2"></TextBox>
+                        <TextBox Grid.Row="1" Grid.Column="1" Margin="2"></TextBox>
+                        <TextBox Grid.Row="2" Grid.Column="1" Margin="2"></TextBox>
+                        <Image Grid.Row="0" Grid.Column="2" Source="assets/info.png" Margin="2" ToolTip="Maximo 100 caracteres"></Image>
+                        <Image Grid.Row="1" Grid.Column="2" Source="assets/info.png" Margin="2" ToolTip="Numero entre 0 y 100"></Image>
+                        <Image Grid.Row="2" Grid.Column="2" Source="assets/info.png" Margin="2" ToolTip="Incluir el codigo postal"></Image>
+                    </Grid>
+                </Border>
+                <Border DockPanel.Dock="Top" Background="LightYellow" Margin="5" BorderBrush="Black" BorderThickness="3" CornerRadius="3">
+                    <Border.Effect>
+                        <DropShadowEffect BlurRadius="5" ShadowDepth="5"/>
+                    </Border.Effect>
+                    <WrapPanel>
+                        <GroupBox Header="Aficiones" BorderBrush="CadetBlue" Width="150" Margin="10">
+                            <StackPanel>
+                                <CheckBox>Hacer deporte</CheckBox>
+                                <CheckBox>Viajar</CheckBox>
+                                <CheckBox>Ver Series</CheckBox>
+                                <CheckBox>Leer Comics</CheckBox>
+                            </StackPanel>
+                        </GroupBox>
+                        <GroupBox Header="Aficiones"  Width="150" Margin="10" BorderBrush="CadetBlue">
+                            <StackPanel>
+                                <RadioButton GroupName="estadoCivil">Soltero</RadioButton>
+                                <RadioButton GroupName="estadoCivil">Casado</RadioButton>
+                                <RadioButton GroupName="estadoCivil">Divorciado</RadioButton>
+                                <RadioButton GroupName="estadoCivil">Viudo</RadioButton>
+                            </StackPanel>
+                        </GroupBox>
+                    </WrapPanel>
+                </Border>
+            </StackPanel>
+        </DockPanel>
+        
+        <DockPanel Grid.Row="2" LastChildFill="False">
+            <TextBlock FontSize="20" Text="Luis Terceras Clayton" FontStyle="Italic" DockPanel.Dock="Left" VerticalAlignment="Bottom"></TextBlock>
+            <Button DockPanel.Dock="Right" Height="25" Width="100" Margin="5" VerticalAlignment="Bottom">Cancelar</Button>
+            <Button DockPanel.Dock="Right" Height="25" Width="100" Margin="5" VerticalAlignment="Bottom">Aceptar</Button>
+        </DockPanel>
+        
+    </Grid>
+</Window>
